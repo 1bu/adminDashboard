@@ -1,0 +1,240 @@
+:root{
+    --main-color: #75B3D9;
+    --secundary-color: #D5DCDE;
+    
+    --yellow-bar: #ffc636;
+
+    --main-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;;
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template: repeat(12,1fr) / repeat(12,1fr);
+}
+
+/* Navbar Styles */
+
+.navbar{
+    grid-area: 1 / 3 / 3 / 13;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template: repeat(2,1fr) / repeat(12,1fr);
+    box-shadow: var(--main-shadow);
+    position: relative;
+}
+
+.search{
+    grid-area: 1 / 1 / 2 / 8;
+    display: flex;
+    align-items: center;
+    width: 85%;
+}
+
+input{
+    width: 100%;
+    border-radius: 20px;
+    padding: .5rem;
+    margin: 10px;
+    background-color: var(--secundary-color);
+    border: none;
+}
+
+
+.profile{
+    grid-area: 1 / 8 / 2 / 13;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;    
+    justify-content: space-around;
+}
+
+.profile span{
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 5px;
+}
+
+.photo{
+    border-radius: 50%;
+    width: 15%;
+    height: 100%;
+}
+
+.bio{
+    grid-area: 2 / 1 / 3 / 8;
+    display: flex;
+    align-items: center;
+    width:80%;
+}
+
+.bio > img{
+    border-radius: 50%;
+    width: 10%;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.btn-container{
+    grid-area: 2 / 8 / 3 / 13;
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+}
+
+.btn{
+    padding: .5rem 2rem;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    border: none;
+    color:#FFF;
+    font-weight: 600;
+}
+
+/* Sidebar Styles */
+
+.sidebar{
+    grid-area: 1 / 1 / 13 / 3;
+    display: grid;
+    grid-template-rows: 5rem repeat(auto-fit, 15rem);
+    background-color: var(--main-color);
+    color: #FFF;
+}
+
+.header, .social-elem, .settings-elem{
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+}
+
+.header span, .social-elem span, .settings-elem span{
+    margin-right: 1rem;
+}
+
+
+
+/* Main Styles */
+
+.main{
+    grid-area: 3 / 3 / 13 / 13;
+    display: grid;
+    grid-template: repeat(12,1fr) / repeat(12,1fr);
+    background-color: var(--secundary-color);
+}
+
+.projects{
+    grid-area: 1 / 1 / 13 / 10;
+    padding: 2rem;
+}
+
+.project-cards-container{
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2,1fr);
+}
+
+.project-cards{
+    width: 80%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: var(--main-shadow);
+    border-left: 5px solid #f7c035;
+}
+
+.project-cards p{
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+    line-height: 1.2;
+}
+
+.project-cards span{
+    float: right;
+    margin: 2px;
+}
+
+
+/*Annoucenmentes Styles (Comparte Estilos con trend, preguntar) */
+
+.announce-card{
+    grid-area: 1 / 10 / 7 / 13;
+    display: grid;
+    justify-content: center;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.announce{
+    display: inline-block;
+    width: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: var(--main-shadow);
+    width: 16rem;
+    margin-top: 1rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.announce-info {
+    margin: 1rem;
+    
+}
+
+.announce-info h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.announce-info p{
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+    line-height: 1.2;
+}
+
+/* Trend Style */
+
+.trend{
+    grid-area: 7 / 10 / 13 / 13;
+    display: grid;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.trend-container{
+    box-shadow: var(--main-shadow);
+    background-color: #FFF;
+    border-radius: 10px;
+    width: 16rem;
+    margin-top: 1rem;
+    padding: 0 1rem 0 1rem;
+}
+
+.trend-card{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.trend-text{
+    margin-left: 1rem;
+}
+
+.trend-text span{
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.trend-text p{
+    font-weight: 700;
+    font-size: 16px;
+}
